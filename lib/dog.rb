@@ -1,8 +1,10 @@
 class Dog
   attr_accessor :name, :breed, :id
+  @@all = []
 
   def initialize(attr_hash)
     attr_hash.each {|k, v| self.send(("#{k}="), v)}
+    @@all << self
   end
 
   def self.create_table
@@ -61,7 +63,7 @@ class Dog
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?;", hash[:name], hash[:breed])
 
     if !dog.empty?
-      dog = Dog.new(dog)
+
     else
       self.create(hash)
     end
