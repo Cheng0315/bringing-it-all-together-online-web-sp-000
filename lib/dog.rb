@@ -56,4 +56,8 @@ class Dog
 
     Dog.new(hash)
   end
+
+  def self.find_or_create_by
+
+  end
 end
