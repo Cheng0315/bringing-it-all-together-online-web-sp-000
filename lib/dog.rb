@@ -2,7 +2,7 @@ class Dog
   attr_accessor :name, :breed, :id
 
   def initialize(attr_hash)
-    attr_hash.each {|k, v| self.send(("#{k}") == v)}
+    attr_hash.each {|k, v| self.send(("#{k}") = v)}
   end
 
   def self.create_table
