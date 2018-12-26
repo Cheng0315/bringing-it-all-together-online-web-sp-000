@@ -62,8 +62,6 @@ class Dog
 
     if dog.empty?
       self.create(hash)
-    else
-      self.find_by_id(hash[:id])
     end
   end
 end
