@@ -58,6 +58,8 @@ class Dog
   end
 
   def self.find_or_create_by(hash)
+    dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?;", hash[:name], hash[:breed])
+
     if !find_by_id(hash[:id])
       find_by_id(hash[:id])
     else
