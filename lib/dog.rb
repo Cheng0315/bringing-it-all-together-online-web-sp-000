@@ -61,7 +61,7 @@ class Dog
     dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?;", hash[:name], hash[:breed])
 
     if !dog.empty?
-      self.find_by_id(hash[:id])
+      dog
     else
       self.create(hash)
     end
