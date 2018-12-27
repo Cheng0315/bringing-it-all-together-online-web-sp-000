@@ -64,7 +64,7 @@ class Dog
 
     if dog.empty?
       self.create(hash)
-    else dog.empty?
+    else
       dog_data = dog[0]
       @@all.find {|d| d.id == dog_data[0]}
     end
