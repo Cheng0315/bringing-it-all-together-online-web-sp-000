@@ -64,7 +64,7 @@ class Dog
 
     if !dog.empty?
       dog_data = dog[0]
-      @@all.find {|d| d.id == dog[0]}
+      @@all.find {|d| d.id == dog_data[0]}
     else dog.empty?
       self.create(hash)
     end
