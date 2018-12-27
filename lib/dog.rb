@@ -7,6 +7,10 @@ class Dog
     @@all << self
   end
 
+  def self.all
+    @@all
+  end
+
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS dogs (
@@ -66,7 +70,7 @@ class Dog
       self.create(hash)
     else
       dog_data = dog[0]
-      @@all.find {|d| d.id == dog_data[0]}
+      self.all.find {|d| d.id == dog_data[0]}
     end
   end
 end
