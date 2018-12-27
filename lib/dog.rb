@@ -74,7 +74,9 @@ class Dog
     end
   end
 
-  def self.new_from_db(hash)
-    self.find_or_create_by(hash)
+  def self.new_from_db(row)
+    hash = {id: row[0], name: row[1], breed: row[2]}
+
+    Dog.new(hash)
   end
 end
