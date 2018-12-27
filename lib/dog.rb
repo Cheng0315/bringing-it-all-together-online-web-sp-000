@@ -73,4 +73,8 @@ class Dog
       self.all.find {|d| d.id == dog_data[0]}
     end
   end
+
+  def self.new_from_db
+
+  end
 end
