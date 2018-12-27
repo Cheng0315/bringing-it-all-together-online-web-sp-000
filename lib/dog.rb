@@ -78,4 +78,8 @@ class Dog
     hash = {id: row[0], name: row[1], breed: row[2]}
     Dog.new(hash)
   end
+
+  def self.find_by_name
+
+  end
 end
