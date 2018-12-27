@@ -74,7 +74,7 @@ class Dog
     end
   end
 
-  def self.new_from_db(hash)
-    dog = Dog.new(hash)
+  def self.new_from_db(row)
+    find_by_id(row[0])
   end
 end
