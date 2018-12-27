@@ -74,7 +74,7 @@ class Dog
     end
   end
 
-  def self.new_from_db(row)
-    find_by_id(row[0])
+  def self.new_from_db(hash)
+    self.find_or_create_by(hash)
   end
 end
