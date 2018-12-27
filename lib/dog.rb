@@ -64,6 +64,8 @@ class Dog
 
     if dog.empty?
       self.create(hash)
+    elsif !dog.empty?
+      @@all.find {|d| d.name == hash[:name]}
     end
   end
 end
